@@ -1,0 +1,33 @@
+#include <stdio.h>   // printf, scanf 같은 입출력 함수를 사용하기 위한 헤더파일
+
+int main()           // 프로그램 시작
+{
+   char b;           // 혈액형 문자를 저장할 변수 (A, B, O 입력받기 위해 char 사용)
+   
+   printf("혈액형을 입력하세요.(A, B, O)");  // 사용자에게 혈액형 입력 안내
+   scanf("%c", &b);                         // 키보드로 입력한 문자 하나를 변수 b에 저장
+   
+   switch(b) {      // 변수 b의 값에 따라 실행할 내용을 선택
+   
+        case 'A':   // 입력값이 문자 A이면
+            printf("A형입니다.\n");  // A형이라는 문구 출력
+            break;   // switch문 종료 (다음 case로 넘어가지 않도록 함)
+            
+        case 'B':   // 입력값이 문자 B이면
+            printf("B형입니다.\n");  // B형 출력
+            break;  // switch문 종료
+            
+        case 'O':   // 입력값이 문자 O이면
+            printf("O형입니다.\n");  // O형 출력
+            break;  // switch문 종료
+            
+        default:   // 위의 경우(A,B,O)가 모두 아닐 때 실행
+            printf("입력오류\n");   // 잘못 입력했다는 메시지 출력
+   }
+
+   return 0;   // 프로그램 정상 종료
+}
+   
+   
+   return 0;
+}
